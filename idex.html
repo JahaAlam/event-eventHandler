@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            border: 2px solid blue;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" onclick="alert('hei! clicked')" 
+    onmouseover="this.style.backgroundColor='red'" 
+    onmouseout="this.style.backgroundColor='white'" >
+        <header>
+            <h3 id="header" onclick="this.innerText='Event Changed!'" onmouseout="this.style.color='blue'" onmouseover="this.style.color='yellow'">Event and Eventhandler!</h3>
+            <p id="sub-header"></p>
+        </header>
+    </div>
+
+
+
+
+    <script>
+       let divEl = document.getElementById("box")
+       divEl.onclick = function(e){
+        divEl.style.background = 'green';
+       }
+
+    </script>
+</body>
+</html>
